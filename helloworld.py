@@ -317,13 +317,13 @@ def helpmessage():
     else:
         key = ''
     helpMessage =   "╔══[ Help Message ]" + "\n" + \
-                    "╠ " + key + "Help" + "\n" + \
+                    "╠ " + key + "Falkey" + "\n" + \
                     "╠ " + key + "Translate" + "\n" + \
                     "╠ " + key + "TTS" + "\n" + \
                     "╠══[ Status Command ]" + "\n" + \
                     "╠ " + key + "Restart" + "\n" + \
                     "╠ " + key + "Runtime" + "\n" + \
-                    "╠ " + key + "Speed" + "\n" + \
+                    "╠ " + key + "Sp" + "\n" + \
                     "╠ " + key + "Status" + "\n" + \
                     "╠ MyKey" + "\n" + \
                     "╠ SetKey「On/Off」" + "\n" + \
@@ -352,11 +352,11 @@ def helpmessage():
                     "╠ " + key + "StealMid「Mention」" + "\n" + \
                     "╠ " + key + "StealName「Mention」" + "\n" + \
                     "╠ " + key + "StealBio「Mention」" + "\n" + \
-                    "╠ " + key + "StealPicture「Mention」" + "\n" + \
+                    "╠ " + key + "StealPict「Mention」" + "\n" + \
                     "╠ " + key + "StealVideoProfile「Mention」" + "\n" + \
                     "╠ " + key + "StealCover「Mention」" + "\n" + \
-                    "╠ " + key + "CloneProfile「Mention」" + "\n" + \
-                    "╠ " + key + "RestoreProfile" + "\n" + \
+                    "╠ " + key + "Me copy「Mention」" + "\n" + \
+                    "╠ " + key + "Restore me" + "\n" + \
                     "╠ " + key + "BackupProfile" + "\n" + \
                     "╠ " + key + "ChangePictureProfile" + "\n" + \
                     "╠══[ Group Command ]" + "\n" + \
@@ -364,20 +364,20 @@ def helpmessage():
                     "╠ " + key + "GroupId" + "\n" + \
                     "╠ " + key + "GroupName" + "\n" + \
                     "╠ " + key + "GroupPicture" + "\n" + \
-                    "╠ " + key + "GroupTicket" + "\n" + \
-                    "╠ " + key + "GroupTicket「On/Off」" + "\n" + \
-                    "╠ " + key + "GroupList" + "\n" + \
-                    "╠ " + key + "GroupMemberList" + "\n" + \
-                    "╠ " + key + "GroupInfo" + "\n" + \
-                    "╠ " + key + "ChangeGroupPicture" + "\n" + \
+                    "╠ " + key + "Grl" + "\n" + \
+                    "╠ " + key + "Grl「On/Off」" + "\n" + \
+                    "╠ " + key + "GList" + "\n" + \
+                    "╠ " + key + "GMList" + "\n" + \
+                    "╠ " + key + "GInfo" + "\n" + \
+                    "╠ " + key + "CGPict" + "\n" + \
                     "╠══[ Special Command ]" + "\n" + \
                     "╠ " + key + "Mimic「On/Off」" + "\n" + \
                     "╠ " + key + "MimicList" + "\n" + \
                     "╠ " + key + "MimicAdd「Mention」" + "\n" + \
                     "╠ " + key + "MimicDel「Mention」" + "\n" + \
-                    "╠ " + key + "Mention" + "\n" + \
+                    "╠ " + key + "Tag" + "\n" + \
                     "╠ " + key + "Lurking「On/Off/Reset」" + "\n" + \
-                    "╠ " + key + "Lurking" + "\n" + \
+                    "╠ " + key + "Lurk" + "\n" + \
                     "╠══[ Media Command ]" + "\n" + \
                     "╠ " + key + "CheckDate「Date」" + "\n" + \
                     "╠ " + key + "CheckWebsite「url」" + "\n" + \
@@ -391,7 +391,7 @@ def helpmessage():
                     "╠ " + key + "SearchMusic 「Search」" + "\n" + \
                     "╠ " + key + "SearchLyric 「Search」" + "\n" + \
                     "╠ " + key + "SearchImage 「Search」" + "\n" + \
-                    "╚══[ Copyright @Zero-Cool404 ]"
+                    "╚══[ Copyright @Fallah ]"
     return helpMessage
 
 def helptexttospeech():
@@ -453,7 +453,7 @@ def helptexttospeech():
                         "╠ " + key + "uk : Ukrainian" + "\n" + \
                         "╠ " + key + "vi : Vietnamese" + "\n" + \
                         "╠ " + key + "cy : Welsh" + "\n" + \
-                        "╚══[ Copyright @Zero-Cool404 ]" + "\n" + "\n\n" + \
+                        "╚══[ Copyright @Fallah ]" + "\n" + "\n\n" + \
                         "Contoh : " + key + "say-id Zero"
     return helpTextToSpeech
 
@@ -569,7 +569,7 @@ def helptranslate():
                     "╠ " + key + "zu : zulu" + "\n" + \
                     "╠ " + key + "fil : Filipino" + "\n" + \
                     "╠ " + key + "he : Hebrew" + "\n" + \
-                    "╚══[ Copyright @Zero-Cool404 ]" + "\n" + "\n\n" + \
+                    "╚══[ Copyright @Fallah ]" + "\n" + "\n\n" + \
                     "Contoh : " + key + "tr-id Zero"
     return helpTranslate
 
@@ -624,7 +624,7 @@ def clientBot(op):
                             return
                         else:
                             cmd = command(text)
-                            if cmd == "help":
+                            if cmd == "Falkey":
                                 helpMessage = helpmessage()
                                 client.sendMessage(to, str(helpMessage))
                             elif cmd == "tts":
@@ -641,9 +641,9 @@ def clientBot(op):
                                 else:
                                     settings["keyCommand"] = str(key).lower()
                                     client.sendMessage(to, "Berhasil mengubah key command menjadi [ {} ]".format(str(key).lower()))
-                            elif cmd == "speed":
+                            elif cmd == "sp":
                                 start = time.time()
-                                client.sendMessage(to, "Benchmarking...")
+                                client.sendMessage(to, "wait...")
                                 elapsed_time = time.time() - start
                                 client.sendMessage(to, "[ Speed ]\nKecepatan mengirim pesan {} detik".format(str(elapsed_time)))
                             elif cmd == "runtime":
