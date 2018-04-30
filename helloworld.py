@@ -275,7 +275,7 @@ def delete_log():
 def sendMention(to, text="", mids=[]):
     arrData = ""
     arr = []
-    mention = "@zeroxyuuki "
+    mention = "@henzfalz "
     if mids == []:
         raise Exception("Invalid mids")
     if "@!" in text:
@@ -316,36 +316,36 @@ def helpmessage():
         key = settings['keyCommand']
     else:
         key = ''
-    helpMessage =   "╔══[ Help Message ]" + "\n" + \
+    helpMessage =   "╔══[ KEYWORD ]" + "\n" + \
                     "╠ " + key + "key" + "\n" + \
                     "╠ " + key + "Translate" + "\n" + \
                     "╠ " + key + "TTS" + "\n" + \
-                    "╠══[ Status Command ]" + "\n" + \
+                    "╠══[ Status BoT ]" + "\n" + \
                     "╠ " + key + "Restart" + "\n" + \
                     "╠ " + key + "Runtime" + "\n" + \
                     "╠ " + key + "Sp" + "\n" + \
                     "╠ " + key + "Status" + "\n" + \
                     "╠ MyKey" + "\n" + \
                     "╠ SetKey「On/Off」" + "\n" + \
-                    "╠══[ Settings Command ]" + "\n" + \
-                    "╠ " + key + "AutoAdd「On/Off」" + "\n" + \
-                    "╠ " + key + "AutoJoin「On/Off」" + "\n" + \
-                    "╠ " + key + "AutoJoinTicket「On/Off」" + "\n" + \
-                    "╠ " + key + "AutoLeave「On/Off」" + "\n" + \
+                    "╠══[ Settings ]" + "\n" + \
+                    "╠ " + key + "Add「On/Off」" + "\n" + \
+                    "╠ " + key + "Join「On/Off」" + "\n" + \
+                    "╠ " + key + "JoinQR「On/Off」" + "\n" + \
+                    "╠ " + key + "Leave「On/Off」" + "\n" + \
                     "╠ " + key + "AutoRead「On/Off」" + "\n" + \
-                    "╠ " + key + "AutoRespon「On/Off」" + "\n" + \
-                    "╠ " + key + "CheckContact「On/Off」" + "\n" + \
-                    "╠ " + key + "CheckPost「On/Off」" + "\n" + \
-                    "╠ " + key + "CheckSticker「On/Off」" + "\n" + \
+                    "╠ " + key + "Respon「On/Off」" + "\n" + \
+                    "╠ " + key + "Contact「On/Off」" + "\n" + \
+                    "╠ " + key + "Post「On/Off」" + "\n" + \
+                    "╠ " + key + "Sticker「On/Off」" + "\n" + \
                     "╠ " + key + "UnsendChat「On/Off」" + "\n" + \
-                    "╠══[ Self Command ]" + "\n" + \
+                    "╠══[ Self Key ]" + "\n" + \
                     "╠ " + key + "ChangeName:「Query」" + "\n" + \
                     "╠ " + key + "ChangeBio:「Query」" + "\n" + \
                     "╠ " + key + "fal" + "\n" + \
                     "╠ " + key + "MyMid" + "\n" + \
                     "╠ " + key + "MyName" + "\n" + \
                     "╠ " + key + "MyBio" + "\n" + \
-                    "╠ " + key + "MyPicture" + "\n" + \
+                    "╠ " + key + "MyPict" + "\n" + \
                     "╠ " + key + "MyVideoProfile" + "\n" + \
                     "╠ " + key + "MyCover" + "\n" + \
                     "╠ " + key + "StealContact「Mention」" + "\n" + \
@@ -355,42 +355,42 @@ def helpmessage():
                     "╠ " + key + "StealPicture「Mention」" + "\n" + \
                     "╠ " + key + "StealVideoProfile「Mention」" + "\n" + \
                     "╠ " + key + "StealCover「Mention」" + "\n" + \
-                    "╠ " + key + "CloneProfile「Mention」" + "\n" + \
-                    "╠ " + key + "RestoreProfile" + "\n" + \
-                    "╠ " + key + "BackupProfile" + "\n" + \
-                    "╠ " + key + "ChangePictureProfile" + "\n" + \
-                    "╠══[ Group Command ]" + "\n" + \
-                    "╠ " + key + "GroupCreator" + "\n" + \
-                    "╠ " + key + "GroupId" + "\n" + \
-                    "╠ " + key + "GroupName" + "\n" + \
-                    "╠ " + key + "GroupPicture" + "\n" + \
-                    "╠ " + key + "GroupTicket" + "\n" + \
-                    "╠ " + key + "GroupTicket「On/Off」" + "\n" + \
-                    "╠ " + key + "GroupList" + "\n" + \
-                    "╠ " + key + "GroupMemberList" + "\n" + \
-                    "╠ " + key + "GroupInfo" + "\n" + \
-                    "╠ " + key + "ChangeGroupPicture" + "\n" + \
+                    "╠ " + key + "Copy「Mention」" + "\n" + \
+                    "╠ " + key + "Restore" + "\n" + \
+                    "╠ " + key + "BackupMe" + "\n" + \
+                    "╠ " + key + "CPP" + "\n" + \
+                    "╠══[ Group Key ]" + "\n" + \
+                    "╠ " + key + "GCreator" + "\n" + \
+                    "╠ " + key + "GId" + "\n" + \
+                    "╠ " + key + "GName" + "\n" + \
+                    "╠ " + key + "GPicture" + "\n" + \
+                    "╠ " + key + "GTicket" + "\n" + \
+                    "╠ " + key + "GTicket「On/Off」" + "\n" + \
+                    "╠ " + key + "GList" + "\n" + \
+                    "╠ " + key + "GMList" + "\n" + \
+                    "╠ " + key + "GInfo" + "\n" + \
+                    "╠ " + key + "GroupCP" + "\n" + \
                     "╠══[ Special Command ]" + "\n" + \
                     "╠ " + key + "Mimic「On/Off」" + "\n" + \
                     "╠ " + key + "MimicList" + "\n" + \
                     "╠ " + key + "MimicAdd「Mention」" + "\n" + \
                     "╠ " + key + "MimicDel「Mention」" + "\n" + \
                     "╠ " + key + "Crot" + "\n" + \
-                    "╠ " + key + "Lurking「On/Off/Reset」" + "\n" + \
-                    "╠ " + key + "Lurking" + "\n" + \
-                    "╠══[ Media Command ]" + "\n" + \
+                    "╠ " + key + "Lurk「On/Off/Reset」" + "\n" + \
+                    "╠ " + key + "Lurks" + "\n" + \
+                    "╠══[ Media Key ]" + "\n" + \
                     "╠ " + key + "CheckDate「Date」" + "\n" + \
                     "╠ " + key + "CheckWebsite「url」" + "\n" + \
-                    "╠ " + key + "CheckPraytime「Location」" + "\n" + \
-                    "╠ " + key + "CheckWeather「Location」" + "\n" + \
-                    "╠ " + key + "CheckLocation「Location」" + "\n" + \
+                    "╠ " + key + "Sholat「Location」" + "\n" + \
+                    "╠ " + key + "Cuaca「Location」" + "\n" + \
+                    "╠ " + key + "Location「Location」" + "\n" + \
                     "╠ " + key + "InstaInfo 「UserName」" + "\n" + \
                     "╠ " + key + "InstaPost 「UserName」|「Number」" + "\n" + \
                     "╠ " + key + "InstaStory 「UserName」|「Number」" + "\n" + \
-                    "╠ " + key + "SearchYoutube「Search」" + "\n" + \
-                    "╠ " + key + "SearchMusic 「Search」" + "\n" + \
-                    "╠ " + key + "SearchLyric 「Search」" + "\n" + \
-                    "╠ " + key + "SearchImage 「Search」" + "\n" + \
+                    "╠ " + key + "Youtube「Search」" + "\n" + \
+                    "╠ " + key + "Music 「Search」" + "\n" + \
+                    "╠ " + key + "Lyric 「Search」" + "\n" + \
+                    "╠ " + key + "Image 「Search」" + "\n" + \
                     "╚══[ Creator : FaLLaH ]"
     return helpMessage
 
@@ -399,7 +399,7 @@ def helptexttospeech():
         key = settings['keyCommand']
     else:
         key = ''
-    helpTextToSpeech =  "╔══[ Help TextToSpeech ]" + "\n" + \
+    helpTextToSpeech =  "╔══[ Key TTS ]" + "\n" + \
                         "╠ " + key + "af : Afrikaans" + "\n" + \
                         "╠ " + key + "sq : Albanian" + "\n" + \
                         "╠ " + key + "ar : Arabic" + "\n" + \
@@ -453,8 +453,8 @@ def helptexttospeech():
                         "╠ " + key + "uk : Ukrainian" + "\n" + \
                         "╠ " + key + "vi : Vietnamese" + "\n" + \
                         "╠ " + key + "cy : Welsh" + "\n" + \
-                        "╚══[ Copyright @Zero-Cool404 ]" + "\n" + "\n\n" + \
-                        "Contoh : " + key + "say-id Zero"
+                        "╚══[ Creator : Fall ]" + "\n" + "\n\n" + \
+                        "Contoh : " + key + "say-id Fall"
     return helpTextToSpeech
 
 def helptranslate():
@@ -462,7 +462,7 @@ def helptranslate():
         key = settings['keyCommand']
     else:
         key = ''
-    helpTranslate = "╔══[ Help Translate ]" + "\n" + \
+    helpTranslate = "╔══[ Key Translate ]" + "\n" + \
                     "╠ " + key + "af : afrikaans" + "\n" + \
                     "╠ " + key + "sq : albanian" + "\n" + \
                     "╠ " + key + "am : amharic" + "\n" + \
@@ -569,8 +569,8 @@ def helptranslate():
                     "╠ " + key + "zu : zulu" + "\n" + \
                     "╠ " + key + "fil : Filipino" + "\n" + \
                     "╠ " + key + "he : Hebrew" + "\n" + \
-                    "╚══[ Copyright @Zero-Cool404 ]" + "\n" + "\n\n" + \
-                    "Contoh : " + key + "tr-id Zero"
+                    "╚══[ Creator : Fall ]" + "\n" + "\n\n" + \
+                    "Contoh : " + key + "tr-id Fall"
     return helpTranslate
 
 def clientBot(op):
@@ -655,58 +655,58 @@ def clientBot(op):
                                 client.sendMessage(to, "Berhasil merestart Bot")
                                 restartBot()
 # Pembatas Script #
-                            elif cmd == "autoadd on":
+                            elif cmd == "add on":
                                 settings["autoAdd"] = True
                                 client.sendMessage(to, "Berhasil mengaktifkan auto add")
-                            elif cmd == "autoadd off":
+                            elif cmd == "add off":
                                 settings["autoAdd"] = False
                                 client.sendMessage(to, "Berhasil menonaktifkan auto add")
-                            elif cmd == "autojoin on":
+                            elif cmd == "join on":
                                 settings["autoJoin"] = True
                                 client.sendMessage(to, "Berhasil mengaktifkan auto join")
-                            elif cmd == "autojoin off":
+                            elif cmd == "join off":
                                 settings["autoJoin"] = False
                                 client.sendMessage(to, "Berhasil menonaktifkan auto join")
-                            elif cmd == "autoleave on":
+                            elif cmd == "leave on":
                                 settings["autoLeave"] = True
                                 client.sendMessage(to, "Berhasil mengaktifkan auto leave")
-                            elif cmd == "autoleave off":
+                            elif cmd == "leave off":
                                 settings["autoLeave"] = False
                                 client.sendMessage(to, "Berhasil menonaktifkan auto leave")
-                            elif cmd == "autorespon on":
+                            elif cmd == "respon on":
                                 settings["autoRespon"] = True
                                 client.sendMessage(to, "Berhasil mengaktifkan auto respon")
-                            elif cmd == "autorespon off":
+                            elif cmd == "respon off":
                                 settings["autoRespon"] = False
                                 client.sendMessage(to, "Berhasil menonaktifkan auto respon")
-                            elif cmd == "autoread on":
+                            elif cmd == "read on":
                                 settings["autoRead"] = True
                                 client.sendMessage(to, "Berhasil mengaktifkan auto read")
-                            elif cmd == "autoread off":
+                            elif cmd == "read off":
                                 settings["autoRead"] = False
                                 client.sendMessage(to, "Berhasil menonaktifkan auto read")
-                            elif cmd == "autojointicket on":
+                            elif cmd == "joinqr on":
                                 settings["autoJoinTicket"] = True
                                 client.sendMessage(to, "Berhasil mengaktifkan auto join by ticket")
-                            elif cmd == "autoJoinTicket off":
+                            elif cmd == "Joinqr off":
                                 settings["autoJoin"] = False
                                 client.sendMessage(to, "Berhasil menonaktifkan auto join by ticket")
-                            elif cmd == "checkcontact on":
+                            elif cmd == "contact on":
                                 settings["checkContact"] = True
                                 client.sendMessage(to, "Berhasil mengaktifkan check details contact")
-                            elif cmd == "checkcontact off":
+                            elif cmd == "contact off":
                                 settings["checkContact"] = False
                                 client.sendMessage(to, "Berhasil menonaktifkan check details contact")
-                            elif cmd == "checkpost on":
+                            elif cmd == "post on":
                                 settings["checkPost"] = True
                                 client.sendMessage(to, "Berhasil mengaktifkan check details post")
-                            elif cmd == "checkpost off":
+                            elif cmd == "post off":
                                 settings["checkPost"] = False
                                 client.sendMessage(to, "Berhasil menonaktifkan check details post")
-                            elif cmd == "checksticker on":
+                            elif cmd == "sticker on":
                                 settings["checkSticker"] = True
                                 client.sendMessage(to, "Berhasil mengaktifkan check details sticker")
-                            elif cmd == "checksticker off":
+                            elif cmd == "sticker off":
                                 settings["checkSticker"] = False
                                 client.sendMessage(to, "Berhasil menonaktifkan check details sticker")
                             elif cmd == "unsendchat on":
@@ -763,7 +763,7 @@ def clientBot(op):
                                     profile.statusMessage = string
                                     client.updateProfile(profile)
                                     client.sendMessage(to,"Berhasil mengganti status message menjadi{}".format(str(string)))
-                            elif cmd == "fal":
+                            elif cmd == "me":
                                 client.sendContact(to, sender)
                             elif cmd == "mymid":
                                 client.sendMessage(to, "[ MID ]\n{}".format(sender))
@@ -773,7 +773,7 @@ def clientBot(op):
                             elif cmd == "mybio":
                                 contact = client.getContact(sender)
                                 client.sendMessage(to, "[ Status Message ]\n{}".format(contact.statusMessage))
-                            elif cmd == "mypicture":
+                            elif cmd == "mypict":
                                 contact = client.getContact(sender)
                                 client.sendImageWithURL(to,"http://dl.profile.line-cdn.net/{}".format(contact.pictureStatus))
                             elif cmd == "myvideoprofile":
@@ -783,7 +783,7 @@ def clientBot(op):
                                 channel = client.getProfileCoverURL(sender)          
                                 path = str(channel)
                                 client.sendImageWithURL(to, path)
-                            elif cmd.startswith("cloneprofile "):
+                            elif cmd.startswith("copy "):
                                 if 'MENTION' in msg.contentMetadata.keys()!= None:
                                     names = re.findall(r'@(\w+)', text)
                                     mention = ast.literal_eval(msg.contentMetadata['MENTION'])
@@ -796,7 +796,7 @@ def clientBot(op):
                                         contact = client.getContact(ls)
                                         client.cloneContactProfile(ls)
                                         client.sendMessage(to, "Berhasil mengclone profile {}".format(contact.displayName))
-                            elif cmd == "restoreprofile":
+                            elif cmd == "restore":
                                 try:
                                     clientProfile = client.getProfile()
                                     clientProfile.displayName = str(settings["myProfile"]["displayName"])
@@ -810,7 +810,7 @@ def clientBot(op):
                                 except Exception as e:
                                     client.sendMessage(to, "Gagal restore profile")
                                     logError(error)
-                            elif cmd == "backupprofile":
+                            elif cmd == "backupme":
                                 try:
                                     profile = client.getProfile()
                                     settings["myProfile"]["displayName"] = str(profile.displayName)
@@ -900,18 +900,18 @@ def clientBot(op):
                                             path = str(channel)
                                             client.sendImageWithURL(to, str(path))
 # Pembatas Script #
-                            elif cmd == 'groupcreator':
+                            elif cmd == 'gcreator':
                                 group = client.getGroup(to)
                                 GS = group.creator.mid
                                 client.sendContact(to, GS)
-                            elif cmd == 'groupid':
+                            elif cmd == 'gid':
                                 gid = client.getGroup(to)
                                 client.sendMessage(to, "[ID Group : ]\n" + gid.id)
-                            elif cmd == 'grouppicture':
+                            elif cmd == 'gpict':
                                 group = client.getGroup(to)
                                 path = "http://dl.profile.line-cdn.net/" + group.pictureStatus
                                 client.sendImageWithURL(to, path)
-                            elif cmd == 'groupname':
+                            elif cmd == 'gname':
                                 gid = client.getGroup(to)
                                 client.sendMessage(to, "[Nama Group : ]\n" + gid.name)
                             elif cmd == 'groupticket':
@@ -922,7 +922,7 @@ def clientBot(op):
                                         client.sendMessage(to, "[ Group Ticket ]\nhttps://line.me/R/ti/g/{}".format(str(ticket)))
                                     else:
                                         client.sendMessage(to, "Grup qr tidak terbuka silahkan buka terlebih dahulu dengan perintah {}openqr".format(str(settings["keyCommand"])))
-                            elif cmd == 'groupticket on':
+                            elif cmd == 'gticket on':
                                 if msg.toType == 2:
                                     group = client.getGroup(to)
                                     if group.preventedJoinByTicket == False:
@@ -931,7 +931,7 @@ def clientBot(op):
                                         group.preventedJoinByTicket = False
                                         client.updateGroup(group)
                                         client.sendMessage(to, "Berhasil membuka grup qr")
-                            elif cmd == 'groupticket off':
+                            elif cmd == 'gticket off':
                                 if msg.toType == 2:
                                     group = client.getGroup(to)
                                     if group.preventedJoinByTicket == True:
@@ -940,7 +940,7 @@ def clientBot(op):
                                         group.preventedJoinByTicket = True
                                         client.updateGroup(group)
                                         client.sendMessage(to, "Berhasil menutup grup qr")
-                            elif cmd == 'groupinfo':
+                            elif cmd == 'ginfo':
                                 group = client.getGroup(to)
                                 try:
                                     gCreator = group.creator.displayName
@@ -968,7 +968,7 @@ def clientBot(op):
                                 ret_ += "\n╚══[ Finish ]"
                                 client.sendMessage(to, str(ret_))
                                 client.sendImageWithURL(to, path)
-                            elif cmd == 'groupmemberlist':
+                            elif cmd == 'gmlist':
                                 if msg.toType == 2:
                                     group = client.getGroup(to)
                                     ret_ = "╔══[ Member List ]"
@@ -978,7 +978,7 @@ def clientBot(op):
                                         no += 1
                                     ret_ += "\n╚══[ Total {} ]".format(str(len(group.members)))
                                     client.sendMessage(to, str(ret_))
-                            elif cmd == 'grouplist':
+                            elif cmd == 'glist':
                                     groups = client.groups
                                     ret_ = "╔══[ Group List ]"
                                     no = 0 + 1
@@ -989,15 +989,15 @@ def clientBot(op):
                                     ret_ += "\n╚══[ Total {} Groups ]".format(str(len(groups)))
                                     client.sendMessage(to, str(ret_))
 # Pembatas Script #
-                            elif cmd == "changepictureprofile":
+                            elif cmd == "cpp":
                                 settings["changePictureProfile"] = True
                                 client.sendMessage(to, "Silahkan kirim gambarnya")
-                            elif cmd == "changegrouppicture":
+                            elif cmd == "groupcp":
                                 if msg.toType == 2:
                                     if to not in settings["changeGroupPicture"]:
                                         settings["changeGroupPicture"].append(to)
                                     client.sendMessage(to, "Silahkan kirim gambarnya")
-                            elif cmd == 'call':
+                            elif cmd == 'crot':
                                 group = client.getGroup(msg.to)
                                 nama = [contact.mid for contact in group.members]
                                 k = len(nama)//100
@@ -1008,10 +1008,10 @@ def clientBot(op):
                                     for i in group.members[a*100 : (a+1)*300]:
                                         b.append({"S":str(s), "E" :str(s+6), "M":i.mid})
                                         s += 7
-                                        txt += u'@Zero \n'
+                                        txt += u'@Fall \n'
                                     client.sendMessage(to, text=txt, contentMetadata={u'MENTION': json.dumps({'MENTIONEES':b})}, contentType=0)
                                     client.sendMessage(to, "Total {} Mention".format(str(len(nama))))  
-                            elif cmd == "lurking on":
+                            elif cmd == "lurk on":
                                 tz = pytz.timezone("Asia/Makassar")
                                 timeNow = datetime.now(tz=tz)
                                 day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday","Friday", "Saturday"]
@@ -1048,7 +1048,7 @@ def clientBot(op):
                                     read['readTime'][receiver] = readTime
                                     read['ROM'][receiver] = {}
                                     client.sendMessage(receiver,"Set reading point : \n" + readTime)
-                            elif cmd == "lurking off":
+                            elif cmd == "lurk off":
                                 tz = pytz.timezone("Asia/Makassar")
                                 timeNow = datetime.now(tz=tz)
                                 day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday","Friday", "Saturday"]
@@ -1072,7 +1072,9 @@ def clientBot(op):
                                         pass
                                     client.sendMessage(receiver,"Delete reading point : \n" + readTime)
         
-                            elif cmd == "lurking reset":
+                            
+                            elif cmd == "lurk reset":
+                                 
                                 tz = pytz.timezone("Asia/Makassar")
                                 timeNow = datetime.now(tz=tz)
                                 day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday","Friday", "Saturday"]
@@ -1100,8 +1102,9 @@ def clientBot(op):
                                     client.sendMessage(msg.to, "Reset reading point : \n" + readTime)
                                 else:
                                     client.sendMessage(msg.to, "Lurking belum diaktifkan ngapain di reset?")
-                                    
-                            elif cmd == "lurking":
+                                             
+                                
+                            elif cmd == "lurks":
                                 tz = pytz.timezone("Asia/Makassar")
                                 timeNow = datetime.now(tz=tz)
                                 day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday","Friday", "Saturday"]
@@ -1219,7 +1222,7 @@ def clientBot(op):
                                     client.sendMessage(to, str(ret_))
                                 except Exception as error:
                                     logError(error)
-                            elif cmd.startswith("checkpraytime "):
+                            elif cmd.startswith("sholat "):
                                 separate = msg.text.split(" ")
                                 location = msg.text.replace(separate[0] + " ","")
                                 r = requests.get("http://api.corrykalam.net/apisholat.php?lokasi={}".format(location))
@@ -1238,7 +1241,7 @@ def clientBot(op):
                                     ret_ += "\n╠ " + data[5]
                                     ret_ += "\n╚══[ Success ]"
                                     client.sendMessage(msg.to, str(ret_))
-                            elif cmd.startswith("checkweather "):
+                            elif cmd.startswith("cuaca "):
                                 try:
                                     sep = text.split(" ")
                                     location = text.replace(sep[0] + " ","")
@@ -1261,7 +1264,7 @@ def clientBot(op):
                                         client.sendMessage(to, str(ret_))
                                 except Exception as error:
                                     logError(error)
-                            elif cmd.startswith("checklocation "):
+                            elif cmd.startswith("location "):
                                 try:
                                     sep = text.split(" ")
                                     location = text.replace(sep[0] + " ","")
@@ -1360,7 +1363,7 @@ def clientBot(op):
                                 tts.save("hasil.mp3")
                                 client.sendAudio(to,"hasil.mp3")
                                 
-                            elif cmd.startswith("searchimage"):
+                            elif cmd.startswith("image"):
                                 try:
                                     separate = msg.text.split(" ")
                                     search = msg.text.replace(separate[0] + " ","")
@@ -1375,7 +1378,7 @@ def clientBot(op):
                                         client.sendImageWithURL(to, str(path))
                                 except Exception as error:
                                     logError(error)
-                            elif cmd.startswith("searchmusic "):
+                            elif cmd.startswith("music "):
                                 sep = msg.text.split(" ")
                                 query = msg.text.replace(sep[0] + " ","")
                                 cond = query.split("|")
@@ -1409,7 +1412,7 @@ def clientBot(op):
                                             client.sendImageWithURL(to, str(data["result"]["img"]))
                                             client.sendMessage(to, str(ret_))
                                             client.sendAudioWithURL(to, str(data["result"]["mp3"][0]))
-                            elif cmd.startswith("searchlyric"):
+                            elif cmd.startswith("lyric"):
                                 sep = msg.text.split(" ")
                                 query = msg.text.replace(sep[0] + " ","")
                                 cond = query.split("|")
@@ -1441,7 +1444,7 @@ def clientBot(op):
                                         for char in removeString:
                                             lyric = lyric.replace(char,'')
                                         client.sendMessage(msg.to, str(lyric))
-                            elif cmd.startswith("searchyoutube"):
+                            elif cmd.startswith("youtube"):
                                 sep = text.split(" ")
                                 search = text.replace(sep[0] + " ","")
                                 params = {"search_query": search}
@@ -1480,7 +1483,7 @@ def clientBot(op):
                             client.sendMessage(to, "Berhasil menonaktifkan setkey")
 # Pembatas Script #
                     elif msg.contentType == 1:
-                        if settings["changePictureProfile"] == True:
+                        if settings["changePicturePicture"] == True:
                             path = client.downloadObjectMsg(msg_id)
                             settings["changePictureProfile"] = False
                             client.updateProfilePicture(path)
