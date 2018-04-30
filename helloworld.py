@@ -341,7 +341,7 @@ def helpmessage():
                     "╠══[ Self Key ]" + "\n" + \
                     "╠ " + key + "ChangeName:「Query」" + "\n" + \
                     "╠ " + key + "ChangeBio:「Query」" + "\n" + \
-                    "╠ " + key + "fal" + "\n" + \
+                    "╠ " + key + "Me" + "\n" + \
                     "╠ " + key + "MyMid" + "\n" + \
                     "╠ " + key + "MyName" + "\n" + \
                     "╠ " + key + "MyBio" + "\n" + \
