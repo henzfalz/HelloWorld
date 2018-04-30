@@ -1074,7 +1074,6 @@ def clientBot(op):
         
                             
                             elif cmd == "lurk reset":
-                                 
                                 tz = pytz.timezone("Asia/Makassar")
                                 timeNow = datetime.now(tz=tz)
                                 day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday","Friday", "Saturday"]
@@ -1102,6 +1101,8 @@ def clientBot(op):
                                     client.sendMessage(msg.to, "Reset reading point : \n" + readTime)
                                 else:
                                     client.sendMessage(msg.to, "Lurking belum diaktifkan ngapain di reset?")
+                                
+                                
                                              
                                 
                             elif cmd == "lurks":
