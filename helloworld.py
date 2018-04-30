@@ -317,13 +317,13 @@ def helpmessage():
     else:
         key = ''
     helpMessage =   "╔══[ Help Message ]" + "\n" + \
-                    "╠ " + key + "Help" + "\n" + \
+                    "╠ " + key + "key" + "\n" + \
                     "╠ " + key + "Translate" + "\n" + \
                     "╠ " + key + "TTS" + "\n" + \
                     "╠══[ Status Command ]" + "\n" + \
                     "╠ " + key + "Restart" + "\n" + \
                     "╠ " + key + "Runtime" + "\n" + \
-                    "╠ " + key + "Speed" + "\n" + \
+                    "╠ " + key + "Sp" + "\n" + \
                     "╠ " + key + "Status" + "\n" + \
                     "╠ MyKey" + "\n" + \
                     "╠ SetKey「On/Off」" + "\n" + \
@@ -341,7 +341,7 @@ def helpmessage():
                     "╠══[ Self Command ]" + "\n" + \
                     "╠ " + key + "ChangeName:「Query」" + "\n" + \
                     "╠ " + key + "ChangeBio:「Query」" + "\n" + \
-                    "╠ " + key + "Me" + "\n" + \
+                    "╠ " + key + "fal" + "\n" + \
                     "╠ " + key + "MyMid" + "\n" + \
                     "╠ " + key + "MyName" + "\n" + \
                     "╠ " + key + "MyBio" + "\n" + \
@@ -391,7 +391,7 @@ def helpmessage():
                     "╠ " + key + "SearchMusic 「Search」" + "\n" + \
                     "╠ " + key + "SearchLyric 「Search」" + "\n" + \
                     "╠ " + key + "SearchImage 「Search」" + "\n" + \
-                    "╚══[ Copyright @Zero-Cool404 ]"
+                    "╚══[ Creator : FaLLaH ]"
     return helpMessage
 
 def helptexttospeech():
@@ -641,11 +641,11 @@ def clientBot(op):
                                 else:
                                     settings["keyCommand"] = str(key).lower()
                                     client.sendMessage(to, "Berhasil mengubah key command menjadi [ {} ]".format(str(key).lower()))
-                            elif cmd == "speed":
+                            elif cmd == "sp":
                                 start = time.time()
-                                client.sendMessage(to, "Benchmarking...")
+                                client.sendMessage(to, "wait...")
                                 elapsed_time = time.time() - start
-                                client.sendMessage(to, "[ Speed ]\nKecepatan mengirim pesan {} detik".format(str(elapsed_time)))
+                                client.sendMessage(to, "{} detik".format(str(elapsed_time)))
                             elif cmd == "runtime":
                                 timeNow = time.time()
                                 runtime = timeNow - botStart
@@ -763,8 +763,7 @@ def clientBot(op):
                                     profile.statusMessage = string
                                     client.updateProfile(profile)
                                     client.sendMessage(to,"Berhasil mengganti status message menjadi{}".format(str(string)))
-                            elif cmd == "me":
-                                sendMention(to, "@!", [sender])
+                            elif cmd == "fal":
                                 client.sendContact(to, sender)
                             elif cmd == "mymid":
                                 client.sendMessage(to, "[ MID ]\n{}".format(sender))
