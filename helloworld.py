@@ -375,7 +375,7 @@ def helpmessage():
                     "╠ " + key + "MimicList" + "\n" + \
                     "╠ " + key + "MimicAdd「Mention」" + "\n" + \
                     "╠ " + key + "MimicDel「Mention」" + "\n" + \
-                    "╠ " + key + "Mention" + "\n" + \
+                    "╠ " + key + "Crot" + "\n" + \
                     "╠ " + key + "Lurking「On/Off/Reset」" + "\n" + \
                     "╠ " + key + "Lurking" + "\n" + \
                     "╠══[ Media Command ]" + "\n" + \
@@ -624,7 +624,7 @@ def clientBot(op):
                             return
                         else:
                             cmd = command(text)
-                            if cmd == "help":
+                            if cmd == "key":
                                 helpMessage = helpmessage()
                                 client.sendMessage(to, str(helpMessage))
                             elif cmd == "tts":
@@ -997,7 +997,7 @@ def clientBot(op):
                                     if to not in settings["changeGroupPicture"]:
                                         settings["changeGroupPicture"].append(to)
                                     client.sendMessage(to, "Silahkan kirim gambarnya")
-                            elif cmd == 'mention':
+                            elif cmd == 'call':
                                 group = client.getGroup(msg.to)
                                 nama = [contact.mid for contact in group.members]
                                 k = len(nama)//100
@@ -1005,7 +1005,7 @@ def clientBot(op):
                                     txt = u''
                                     s=0
                                     b=[]
-                                    for i in group.members[a*100 : (a+1)*100]:
+                                    for i in group.members[a*100 : (a+1)*300]:
                                         b.append({"S":str(s), "E" :str(s+6), "M":i.mid})
                                         s += 7
                                         txt += u'@Zero \n'
